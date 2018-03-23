@@ -20,3 +20,63 @@ li a:hover {
     background-color: black;
     color: white;
 }
+
+/* Parallax stuff */
+.parallax {
+    perspective :1px;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.parallax__group {
+    position: relative;
+    height: 100vh;
+    transform-style: preserve-3d;
+}
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+.parallax__layer--back {
+    transform: translateZ(-1px);
+}
+
+/* Navbar adjustments */
+li.nav-item {
+    font-size: 50px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
+
+.navbar-brand {
+    padding-top: 0;
+    height: 80px;
+}
+
+.nav > li > a {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navbar-toggle {
+    padding: 10px;
+    margin: 25px 15px 25px 0;
+}
+
+.dropdown-toggle {
+    font-size: 50px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
+
+.dropdown-menu {
+    font-size: 30px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+}
