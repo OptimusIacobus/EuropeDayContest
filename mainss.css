@@ -1,3 +1,4 @@
+/* nav bar list adjustments */
 ul {
     list-style-type: none;
     margin: 0;
@@ -9,30 +10,35 @@ li {
     float: left;
 }
 
-li a {
-    display: block;
-    text-align: center;
-    padding: 16px 16px;
-    background-color: white;
-}
+    li a {
+        display: block;
+        text-align: center;
+        padding: 16px 16px;
+        background-color: white;
+    }
 
-li a:hover {
-    background-color: black;
-    color: white;
-}
+        li a:hover {
+            background-color: black;
+            color: white;
+        }
+/* main images and their headers */ 
+.main { 
 
+}
 /* Parallax stuff */
 .parallax {
-    perspective :1px;
+    perspective: 1px;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
 }
+
 .parallax__group {
     position: relative;
     height: 100vh;
     transform-style: preserve-3d;
 }
+
 .parallax__layer {
     position: absolute;
     top: 0;
@@ -40,9 +46,11 @@ li a:hover {
     bottom: 0;
     left: 0;
 }
+
 .parallax__layer--base {
     transform: translateZ(0);
 }
+
 .parallax__layer--back {
     transform: translateZ(-1px);
 }
@@ -80,3 +88,74 @@ li.nav-item {
     background-color: cornflowerblue;
     font-weight: bold;
 }
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+    font: 400 15px/1.8 "Lato", sans-serif;
+    color: #777;
+}
+
+.bgimg-1,
+.bgimg-2,
+.bgimg-3 {
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*  .bgimg-1 {
+            background-image: url("stock-internet.jpg");
+            height: 100%;
+            opacity: 1;
+        }
+
+        .bgimg-2 {
+            background-image: url("images/images1/bg.jpg");
+            height: 100%;
+            opacity: 1;
+        }*/
+
+.caption {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: #000;
+}
+
+    .caption span.border {
+        background-color: #111;
+        color: #fff;
+        padding: 18px;
+        font-size: 25px;
+        letter-spacing: 10px;
+    }
+
+h3 {
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font: 20px "Lato", sans-serif;
+    color: #111;
+}
+
+/* carousel css */
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    height: 840px;
+}
+
+.affix {
+    top: 0;
+    width: 100%;
+    z-index: 9999 !important;
+}
+
+    .affix + .container-fluid {
+        padding-top: 70px;
+    }
