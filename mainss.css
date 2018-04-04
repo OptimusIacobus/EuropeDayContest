@@ -1,30 +1,49 @@
-/* nav bar list adjustments */
-ul {
-    list-style-type: none;
-    margin: 0;
+/* main images and their headers */
+* {
     padding: 0;
-    background-color: white;
+    margin: 0;
+    padding-right: 0px;
+    padding-left: 0px;
 }
 
-li {
-    float: left;
-}
-
-    li a {
-        display: block;
-        text-align: center;
-        padding: 16px 16px;
-        background-color: white;
-    }
-
-        li a:hover {
-            background-color: black;
-            color: white;
-        }
-/* main images and their headers */ 
-.main { 
+body, html {
+    height: 100%;
+    padding-right: 0;
+    padding-left: 0;
+    margin: 0;
 
 }
+
+.main {
+    background-image: url("images/brexitBG.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.section1 {
+    background-image: url("images/protestforEU.jpg");
+    background-size: cover;
+    padding: 0;
+    margin: 0;
+    padding-right: 0px;
+    padding-left: 0px;
+
+}
+
+/* videos */
+video {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: absolute;
+}
+
 /* Parallax stuff */
 .parallax {
     perspective: 1px;
@@ -56,19 +75,24 @@ li {
 }
 
 /* Navbar adjustments */
+.navbar {
+    color: goldenrod;
+}
+
 li.nav-item {
-    font-size: 50px;
-    background-color: cornflowerblue;
+    font-size: 25px;
+    background-color: transparent;
     font-weight: bold;
 }
 
 .navbar-brand {
-    padding-top: 0;
     height: 80px;
+    font-size: 35px;
+    margin: 0;
+    font-family: "Lato", sans-serif;
 }
 
 .nav > li > a {
-    padding-top: 30px;
     padding-bottom: 30px;
 }
 
@@ -78,25 +102,17 @@ li.nav-item {
 }
 
 .dropdown-toggle {
-    font-size: 50px;
-    background-color: cornflowerblue;
+    font-size: 20px;
+    background-color: transparent;
     font-weight: bold;
 }
 
 .dropdown-menu {
-    font-size: 30px;
-    background-color: cornflowerblue;
+    font-size: 15px;
+    background-color: transparent;
     font-weight: bold;
 }
-
-body,
-html {
-    height: 100%;
-    margin: 0;
-    font: 400 15px/1.8 "Lato", sans-serif;
-    color: #777;
-}
-
+   
 .bgimg-1,
 .bgimg-2,
 .bgimg-3 {
@@ -120,11 +136,13 @@ html {
 
 .caption {
     position: absolute;
+    font-size: 50px;
     left: 0;
     top: 50%;
     width: 100%;
     text-align: center;
-    color: #000;
+    font-family: 'Quicksand'; 
+    color: darkorange;
 }
 
     .caption span.border {
@@ -135,12 +153,6 @@ html {
         letter-spacing: 10px;
     }
 
-h3 {
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    font: 20px "Lato", sans-serif;
-    color: #111;
-}
 
 /* carousel css */
 

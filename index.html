@@ -3,7 +3,10 @@
 <head>
     <title>Europe Day Contest Website</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:bold&effect=anaglyph" rel="stylesheet">
+
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,28 +14,35 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
     <link type="text/css" rel="stylesheet" href="mainss.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
 
+    <style>
     </style>
 </head>
 <body data-spy="scroll">
+    <!-- class for animation -->
     <div class="w3-container w3-center w3-animate-opacity">
-        <!-- Nav bar-->
-        <nav class="navbar navbar-light bg-light navbar-fixed-top" style="background-color:#4362ba">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/euro_symbol_gold.png" width="80vh" height="80vh" /></a>
-                    <ul class="nav navbar-nav">
+        <!-- get rid of side padding -->
+        <div class="row">
+
+            <!-- Nav bar-->
+
+            <nav class="navbar navbar-light bg-light navbar-fixed-top" style="background-color:transparent">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="#">Europe Day Website Contest</a>
+                    </div>
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="nav-item active"><a href="index.html">Home Page</a></li>
                         <li class="nav-item"><a href="general.html">General Info About the EU</a></li>
                         <li class="nav-item"><a href="brexit.html"><b>The Brexit Crisis</b></a></li>
@@ -40,73 +50,78 @@
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEOS<span class="caret"></span></a>
                             <ul class="dropdown-menu">
                                 <li><a href="videos.html#s1">2018</a></li>
-                                <li><a href="videos.html#s2">2017</a></li>
-                                <li><a href="videos.html#s3">2016</a></li>
                             </ul>
                         </li>
                     </ul>
                 </div>
-            </div>
-        </nav>
-        <!-- End of nav bar-->
+            </nav>
+            <!-- End of nav bar-->
 
-                <div style="font-size:32px;color:black;text-shadow: 0px 0px 10px black">
-                    <p style="font-family: 'Quicksand'">
-                        <h1>Introducing the Europe Day Contest</h1><b />
-                        <h2><b>The European Union's 50th anniversary!</b></h2>
-                    </p>
+            <div class="main">
+                <p>
+                    <br /><br />
+                    <div class="caption">
+                        Europe Day Contest Entry<br />
+                        <b>#EUForWhom: Participation and Democracy in the EU</b><br />
+                        THE BREXIT CRISIS
+                    </div>
+                </p>
 
-                <div class="parallax">
-                    <div class="parallax__group">
-                        <div class="parallax__layer parallax__layer--back" style="background-image: url('images/euro_symbol.png')">
-                        </div>_
-                        <div class="parallax__layer parallax__layer--base">
-                            <h1 style="text-emphasis-color:burlywood">The Euro Currency is a huge factor of the European Union.</h1>
-                        </div>
+            <!-- TODO: Fix section1 so can immediately go after full image-->
+            <!-- <div class="section">-->
+
+            <div class="parallax">
+                <div class="parallax__group">
+                    <div class="parallax__layer parallax__layer--back">
+                    </div>
+                    <div class="parallax__layer parallax__layer--base">
+                        <h1 style="text-emphasis-color:burlywood">The Euro Currency is a huge factor of the European Union.</h1>
                     </div>
                 </div>
-                <div align="center" style="size:80%">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="text-shadow: 0px 0px 10px black;">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Wrapper for slides -->
-                        <!-- Temporarily keeping code out
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="images/images1/images.jpg" alt="Internet" style="width:80%;">
-                                <div class="carousel-caption">
-                                    <h3 style="color:orange; font-family: 'Quicksand' font-style: bold;">More EU stuff Come <a href="html.html" style="color:lightblue">here</a> to get more info.</h3>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="images/euro_symbol.png" alt="Euro" style="width:70%;">
-                                <div class="carousel-caption">
-                                    <h3 style="font-family: 'Quicksand' font-style: bold;">The Euro is a form of the EU's currency. Come <a href="euro.html" style="color:lightblue">here</a> to get more info.</h3>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="images/EUmap.png" alt="EU Map" style="width:80%;">
-                                <div class="carousel-caption">
-                                    <h3 style="color: blue; font-family: 'Quicksand' font-style: bold;">
-                                       Look at the countries of the EU by clicking <a href="eucountries.html" style="color:lightblue">here</a>.
-                                    </h3>
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                            -->
-                    </div>
+            </div>
+            <div align="center" style="size:80%">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel" style="">
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Wrapper for slides -->
+                    <!-- Temporarily keeping code out
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="images/images1/images.jpg" alt="Internet" style="width:80%;">
+                <div class="carousel-caption">
+                    <h3 style="color:orange; font-family: 'Quicksand' font-style: bold;">More EU stuff Come <a href="html.html" style="color:lightblue">here</a> to get more info.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/euro_symbol.png" alt="Euro" style="width:70%;">
+                <div class="carousel-caption">
+                    <h3 style="font-family: 'Quicksand' font-style: bold;">The Euro is a form of the EU's currency. Come <a href="euro.html" style="color:lightblue">here</a> to get more info.</h3>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/EUmap.png" alt="EU Map" style="width:80%;">
+                <div class="carousel-caption">
+                    <h3 style="color: blue; font-family: 'Quicksand' font-style: bold;">
+                       Look at the countries of the EU by clicking <a href="eucountries.html" style="color:lightblue">here</a>.
+                    </h3>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+            </div>
+            -->
+                </div>
                 </div>
             </div>
             <br><br><br>
@@ -114,11 +129,11 @@
                 <button type="button" class="btn btn-primary"><a href="brexit.html">How the Brexit Crisis works</a></button>
                 <button type="button" class="btn btn-primary" href="https://google.com">Google.com</button>
             </div>
+            <footer style="text-align: center; color:grey; color:#7F4FC9">
+                <hr> &copy 2018 Sari Abu-Hamad, Jiangfeng Chu, and Jacob Pan. <br>
+                Contest hosted by <a href="https://www.ucis.pitt.edu/esc/outreach/students/contest">These people.</a>
+            </footer>
         </div>
-        <footer style="text-align: center; color:grey; color:#7F4FC9">
-            <hr> &copy 2018 Sari Abu-Hamad, Jiangfeng Chu, and Jacob Pan. <br>
-            Contest hosted by <a href="https://www.ucis.pitt.edu/esc/outreach/students/contest">These people.</a>
-        </footer>
     </div>
 </body>
 </html>
