@@ -17,6 +17,7 @@ body, html {
 .main {
     background-image: url("images/brexitBG.jpg");
     background-size: cover;
+    height: 100vh;
     padding: 0;
     margin: 0;
     padding-right: 0px;
@@ -30,6 +31,7 @@ body, html {
     margin: 0;
     padding-right: 0px;
     padding-left: 0px;
+    height: 100vh;
 
 }
 
@@ -80,14 +82,15 @@ video {
 }
 
 li.nav-item {
-    font-size: 25px;
+    font-size: 150%;
     background-color: transparent;
     font-weight: bold;
 }
 
 .navbar-brand {
-    height: 80px;
-    font-size: 35px;
+    height: 10px;
+    font-size: 150%;
+    font-weight: bold;
     margin: 0;
     font-family: "Lato", sans-serif;
 }
@@ -138,11 +141,12 @@ li.nav-item {
     position: absolute;
     font-size: 50px;
     left: 0;
-    top: 50%;
+    top: 40vh;
     width: 100%;
     text-align: center;
     font-family: 'Quicksand'; 
-    color: darkorange;
+    color: #a96727;
+    font-weight: 600;
 }
 
     .caption span.border {
