@@ -1,4 +1,4 @@
-<html>
+﻿<html>
 <head>
     <title>Europe Day Contest Website</title>
     <meta charset="UTF-8">
@@ -14,11 +14,30 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+
     <!-- Custom CSS -->
     <link type="text/css" rel="stylesheet" href="mainss.css">
     <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+    <!-- Attempt at adding smooth scrolling with Jquery -->
+    <script src="smoothscroll.js"></script>
+
+    <!-- Specialized CSS for this page -->
+    <style>
+        body {
+            margin: 2px;
+        }
+        h1.header {
+            font-size: 800%;
+            font-family: 'Segoe UI';
+            font-style: normal;
+        }
+        p {
+            padding: 10px;
+            font-size: 240%;
+        }
+    </style>
 </head>
 <body data-spy="scroll">
     <div class="w3-animate-opacity">
@@ -26,7 +45,6 @@
         <div class="row">
 
             <!-- Nav bar-->
-
             <nav class="navbar navbar-light bg-light navbar-fixed-top" style="background-color:transparent">
                 <div class="container-fluid">
                     <div class="navbar-header">
@@ -52,7 +70,29 @@
                 </div>
             </nav>
             <div class="container-fluid">
-                <div class="main">
+                <!-- Links to each section -->
+                <br /><br />
+                <ul>
+                    <li><a href="#one">SECTION 1: ORIGINS</a></li>
+                    <li><a href="#two">SECTION 2: CAUSES</a></li>
+                </ul>
+            </div>
+            <div class="container-fluid">
+                <br />
+                <div class="section1" style="background-color:antiquewhite">
+                    <h1 class="header" id="one">SECTION 1: ORIGINS</h1>
+                    <img src="images/protestforEU.jpg" width="50%" height="70%" alt="EuropeProtests" class="pull-right"/>
+                    <p>
+                        The Brexit protest has been a recent uprising in the United Kingdom, thus earning the name "Brexit" by combining the words "Britain" and "exit." <br />
+                        The uprising has been a protest from British citizens to leave the European Union, a supranational group of 28 nations in Europe. <br />
+                        In a nationwide referendum held in June 2016, the majority of the British people voted for this secession from the European Union.
+
+                    </p>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="section1">
+                    <h1 class="header" id="two">SECTION 2: CAUSES</h1>
                     <div class="parallax">
                         <div class="parallax__group">
                             <div class="parallax__layer parallax__layer--back">
@@ -69,7 +109,7 @@
                 </div>
             </div>
 
-            </div>
         </div>
+    </div>
 </body>
 </html>
