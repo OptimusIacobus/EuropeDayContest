@@ -16,7 +16,6 @@ body, html {
 }
 
 .main {
-    background-image: url("images/brexitBG.jpg");
     background-size: cover;
     height: 100vh;
     padding: 0;
@@ -30,6 +29,12 @@ body, html {
     height: 100vh;
     font-size: 40px;
 
+}
+/* button extra large */
+.btn-xl {
+    padding: 10px 20px;
+    font-size: 40px;
+    border-radius: 30px;
 }
 
 /* videos */
