@@ -46,6 +46,20 @@
             font-size: 240%;
             font-family: 'Franklin Gothic';
         }
+
+        .title {
+            background-size: cover;
+            height: 100vh;
+            padding: 0;
+            margin: 0;
+            padding-right: 0px;
+            padding-left: 0px;
+        }
+        .btn-xl {
+            padding: 10px 20px;
+            font-size: 40px;
+            border-radius: 30px;
+        }
     </style>
 </head>
 
@@ -79,18 +93,24 @@
             </nav>
 
             <!-- End of nav bar-->
-            <div class="container-fluid">
+            <div class="container-fluid title animated rotateIn">
                 <video poster="brexitBG.jpg" autoplay="true" loop>
                     <source src="videos/londonstockvideo.mp4" type="video/mp4" />
                     <source src="videos/londonstockvideo.webm" type="video/webm" />
                 </video>
-                <div class="caption" style="top: 10vh">
+                <div class="caption" style="display: table-cell; vertical-align: middle;">
                     THE GENERAL OVERVIEW OF THE BREXIT MOVEMENT
+                    <div>
+                        <a href="#below" class="btn btn-xl btn-primary">Continue</a>
+                    </div>
                 </div>
+
             </div>
-            <div class="container-fluid">
-                <div style="font-size: 15px; padding-top: 500px; background-color:lightsteelblue">
+            <div class="container-fluid" id="below">
+
+                <div style="font-size: 15px; padding-top: 50px; background-color:lightsteelblue">
                     <br />
+                    <h1 class="header">What is Brexit?</h1>
                     <p>
                         <!-- New image to this please -->
                         <img src="images/protestsforbrexit.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
@@ -106,16 +126,16 @@
             </div>
             <div class="container-fluid">
                 <div style="font-size: 20px; background-color:mediumseagreen">
-                    <h2>Euro:</h2>
+                    <h1 class="header">The Euro Currency:</h1>
                     <!-- To Do - Put in list-->
                     <p>
-                    <img src="images/euro_symbol_gold.png" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
-                    The Euro is the official currency of 19 EU countries: Austria, Belgium, Cyprus, Estonia, Finland, France, Germany, Greece, 
-                    Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Portugal, Slovakia, Slovenia, and Spain. 
-                    These countries are collected known as the euro area or eurozone, with currency regulation controlled by the Eurosystem, 
-                    which consists of the European Central Bank in Frankfurt, Germany and the national banks of member nations. It was established 
-                    as the official EU currency in 1992 through the Maastricht Treaty and remains as the official EU currency.
-                        </p>
+                        <img src="images/euro_symbol_gold.png" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
+                        The Euro is the official currency of 19 EU countries: Austria, Belgium, Cyprus, Estonia, Finland, France, Germany, Greece,
+                        Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Portugal, Slovakia, Slovenia, and Spain.
+                        These countries are collected known as the euro area or eurozone, with currency regulation controlled by the Eurosystem,
+                        which consists of the European Central Bank in Frankfurt, Germany and the national banks of member nations. It was established
+                        as the official EU currency in 1992 through the Maastricht Treaty and remains as the official EU currency.
+                    </p>
                 </div>
             </div>
             <!-- Footer -->
