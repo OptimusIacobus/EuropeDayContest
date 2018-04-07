@@ -27,8 +27,7 @@ body, html {
 .section {
     background-size: cover;
     height: 100vh;
-    font-size: 3.5vh;
-
+    font-size: 2vw;
 }
 
 h1.header {
@@ -39,7 +38,7 @@ h1.header {
 /* button extra large */
 .btn-xl {
     padding: 10px 20px;
-    font-size: 40px;
+    font-size: 4vw;
     border-radius: 30px;
 }
 
@@ -118,29 +117,12 @@ a:hover.navbar-brand{
     background-color: transparent;
     color: purple;
 }
-
-.navbar-toggle {
-    padding: 10px;
-    margin: 25px 15px 25px 0;
-}
-
-.dropdown-toggle {
-    font-size: 20px;
-    background-color: transparent;
-    font-weight: bold;
-}
-
-.dropdown-menu {
-    font-size: 15px;
-    background-color: transparent;
-    font-weight: bold;
-}
   
 .caption {
     position: absolute;
-    font-size: 800%;
+    font-size: 7vw;
     left: 0;
-    top: 20vh;
+    top: 10vh;
     width: 100%;
     text-align: center;
     font-family: 'Quicksand'; 
