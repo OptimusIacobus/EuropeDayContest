@@ -27,8 +27,14 @@ body, html {
 .section {
     background-size: cover;
     height: 100vh;
-    font-size: 40px;
+    font-size: 3.5vh;
 
+}
+
+h1.header {
+    font-size: 5vw;
+    font-family: 'Segoe UI';
+    font-style: normal;
 }
 /* button extra large */
 .btn-xl {
@@ -88,13 +94,13 @@ video {
 
 li.nav-item {
     height: 20px;
-    font-size: 130%;
+    font-size: 1vw;
     font-weight: bold;
 }
 
 .navbar-brand {
     height: 20px;
-    font-size: 250%;
+    font-size: 1.8vw;
     font-weight: bold;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
