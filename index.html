@@ -5,36 +5,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:bold&effect=anaglyph" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <!-- Animate.css hosted by CDNJS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
     <!-- Custom CSS -->
     <link type="text/css" rel="stylesheet" href="mainss.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <!-- Attempt at adding smooth scrolling with Jquery -->
+    <script src="smoothscroll.js"></script>
 
     <style>
+        h2 {
+            font-size: 50%;
+        }
     </style>
 
 
 </head>
 <body data-spy="scroll">
     <!-- class for animation -->
-    <div class="w3-animate-opacity">
+    <div class="animated fadeIn">
         <!-- get rid of side padding -->
         <div class="row">
 
             <!-- Nav bar-->
 
-            <nav class="navbar navbar-light bg-light navbar-fixed-top" style="background-color:transparent">
+            <nav class="navbar navbar-light bg-light navbar-fixed-top">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -43,18 +53,14 @@
                             <span class="icon-bar"></span>
                             <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">Europe Day Website Contest</a>
+                        <a class="navbar-brand" href="index.html">Europe Day Website Contest</a>
                     </div>
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="nav-item active"><a href="index.html">Home Page</a></li>
-                        <li class="nav-item"><a href="general.html">General Info About the EU</a></li>
-                        <li class="nav-item"><a href="brexit.html"><b>The Brexit Crisis</b></a></li>
-                        <li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIDEOS<span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="videos.html#s1">2018</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item active"><a href="index.html">Home</a></li>
+                        <li class="nav-item"><a href="general.html">General Info About the Brexit Crisis</a></li>
+                        <li class="nav-item"><a href="origins.html">Causes Of the Brexit Crisis</a></li>
+                        <li class="nav-item"><a href="against.html">Protests Against the Brexit Movement</a></li>
+                        <li class="nav-item"><a href="impacts.html">How Brexit Affects Nations</a></li>
                     </ul>
                 </div>
             </nav>
@@ -62,78 +68,53 @@
             <!-- End of nav bar-->
             <div class="container-fluid">
                 <div class="main">
-                    <div class="caption">
-                        Europe Day Contest Entry<br />
-                        <b>#EUForWhom: Participation and Democracy in the EU</b><br />
-                        THE BREXIT CRISIS
+                    <div class="caption animated slideInUp">
+                        <div style="font-family: Andalus">THE BREXIT CRISIS</div>
+                        <h2>Europe Day Contest Entry</h2><br />
+                        <h3><b>#EUForWhom: Participation and Democracy in the EU</b></h3>
+                        <a href="#below" class="btn btn-lg btn-primary">Explore Below</a>
                     </div>
                 </div>
             </div>
-            <!-- TODO: Fix section1 so can immediately go after full image-->
-            <!-- <div class="section">-->
-            <div class="container-fluid">
-                <div class="section1">
-                    <img src="images/protestforEU.jpg" alt="EuropeProtests" class="pull-right" />
-                    <h2>
-                        Insert buttons here to navigate to the different sections. Overview and then <a href="general.html">link.</a>
-                    </h2>
+            <div class="container-fluid" id="below">
+                <div class="section" style="background-color:darkred; display: table-cell; vertical-align: middle;">
+                    <p style="font-family: 'Microsoft Yi Baiti', sans-serif; color: dodgerblue; font-weight: bolder">
+                        <img src="images/ukeu.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
+                        The Brexit protest has been a recent uprising in the United Kingdom, thus earning the name "Brexit" by combining the words "Britain" and "exit." <br />
+                        The uprising has been a protest from British citizens to leave the European Union, a supranational group of 28 nations in Europe. <br />
+                        In a nationwide referendum held in June 2016, the majority of the British people voted for this secession from the European Union.
+                        <br /><a href="general.html">Explore more on the general facts on Brtiain, the European Union, and the Brexit Movement.</a>
+                    </p>
                 </div>
+            </div>
 
-                <div align="center" style="size:80%">
-                    <div id="myCarousel" class="carousel slide" data-ride="carousel" style="">
-                        <!-- Indicators -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- Wrapper for slides -->
-                        <!-- Temporarily keeping code out
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="images/images1/images.jpg" alt="Internet" style="width:80%;">
-                                <div class="carousel-caption">
-                                    <h3 style="color:orange; font-family: 'Quicksand' font-style: bold;">More EU stuff Come <a href="html.html" style="color:lightblue">here</a> to get more info.</h3>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="images/euro_symbol.png" alt="Euro" style="width:70%;">
-                                <div class="carousel-caption">
-                                    <h3 style="font-family: 'Quicksand' font-style: bold;">The Euro is a form of the EU's currency. Come <a href="euro.html" style="color:lightblue">here</a> to get more info.</h3>
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="images/EUmap.png" alt="EU Map" style="width:80%;">
-                                <div class="carousel-caption">
-                                    <h3 style="color: blue; font-family: 'Quicksand' font-style: bold;">
-                                       Look at the countries of the EU by clicking <a href="eucountries.html" style="color:lightblue">here</a>.
-                                    </h3>
-                                </div>
-                            </div>
-                            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
-                        </div>
-                            </div>
-                            -->
-                    </div>
+            <div class="container-fluid animated slideInRight">
+                <div class="section" style="background-color:dimgrey; display: table-cell; vertical-align: middle;">
+                    <p style="font-family: 'Open Sans', sans-serif">
+                        <img src="images/protestsforbrexit.jpg" width="60%" height="80%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
+                        There is a significant history to the British wanting to not be part of the EU - for example, many British put their country first and do not even identify as European, just British.
+                        The UK has many causes unto why the movement is so popular.
+                        <br /><a href="origins.html">Explore more on the origins and causes of the Brexit Movement.</a>
+                    </p>
                 </div>
             </div>
 
             <div class="container-fluid">
-                <br><br><br>
-                <div class="btn-group btn-group-lg">
-                    <button type="button" class="btn btn-primary"><a href="brexit.html">How the Brexit Crisis works</a></button>
-                    <button type="button" class="btn btn-primary" href="https://google.com">Google.com</button>
+                <div class="section animated zoomIn" style="background-color:honeydew; display: table-cell; vertical-align: middle;">
+                    <p style="font-family: 'Open Sans', sans-serif">
+                        <img src="images/againstbrexit1.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
+                        Even though a referendum has been passed on leaving the EU, there are many citizens of the UK that do not agree with the movement.
+                        These protestors want another referendum to show that it was only so many people that wanted a secession, and that in reality
+                        the majority of Britons want to stay in the EU for all the benefits it gives.
+                        <br /><a href="against.html">Explore more on the protests against the Brexit Movement.</a>
+                    </p>
                 </div>
-                <footer style="text-align: center; color:grey; color:#7F4FC9">
+            </div>
+
+            <div class="container-fluid">
+                <footer style="text-align: center; color:grey;">
                     <hr> &copy 2018 Sari Abu-Hamad, Jiangfeng Chu, Jupjeet Dhingra, and Jacob Pan. <br>
-                    Contest hosted by <a href="https://www.ucis.pitt.edu/esc/outreach/students/contest">These people.</a>
+                    <a href="workscited.html">Works Cited</a>
                 </footer>
             </div>
             <!-- End of row and animation-->
