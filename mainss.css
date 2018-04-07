@@ -117,15 +117,17 @@ a:hover.navbar-brand{
     background-color: transparent;
     color: purple;
 }
-  
+
 .caption {
     position: absolute;
     font-size: 7vw;
-    left: 0;
-    top: 10vh;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
     width: 100%;
     text-align: center;
-    font-family: 'Quicksand'; 
+    font-family: 'Quicksand';
     color: #ff0000;
     font-weight: 600;
 }
