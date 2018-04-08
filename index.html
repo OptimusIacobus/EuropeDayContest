@@ -28,10 +28,12 @@
     <!-- Attempt at adding smooth scrolling with Jquery -->
     <script src="smoothscroll.js"></script>
 
+    </script>
     <style>
         h2 {
             font-size: 5vh;
         }
+
         .main {
             background-image: url("images/brexitBG.jpg");
         }
@@ -67,17 +69,19 @@
                     </ul>
                 </div>
             </nav>
-
-            <!-- End of nav bar-->
-            <div class="container-fluid main animated slideInUp">
-                    <div class="caption">
-                        <div style="font-family: Andalus; font-size: 8vw">THE BREXIT CRISIS</div>
-                        <h2>Europe Day Contest Entry</h2><br />
-                        <h3><b>#EUForWhom: Participation and Democracy in the EU</b></h3>
-                        <a href="#below" class="btn btn-xl btn-primary">Explore Below</a>
-                    </div>
+            <div>
+                <a class="menu" href="#top">Top</a>
             </div>
-            <div class="container-fluid" id="below">
+            <!-- End of nav bar-->
+            <div class="container-fluid main animated slideInUp" id="top">
+                <div class="caption">
+                    <div style="font-family: Andalus; font-size: 8vw">THE BREXIT CRISIS</div>
+                    <h2>Europe Day Contest Entry</h2><br />
+                    <h3><b>#EUForWhom: Participation and Democracy in the EU</b></h3>
+                    <a href="#below" class="btn btn-xl btn-primary" id="buttons">Explore Below</a>
+                </div>
+            </div>
+            <div class="container-fluid animated slideInRight" id="below">
                 <div class="section" style="background-color:darkred; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Microsoft Yi Baiti', sans-serif; color: dodgerblue; font-weight: bolder">
                         <img src="images/ukeu.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
@@ -118,7 +122,17 @@
                     <a href="workscited.html">Works Cited</a>
                 </footer>
             </div>
-            <!-- End of row and animation-->
+            <script>
+                $("#buttons").click(function () {
+                    setTimeout(function () {
+                        var elem = document.getElementById("below");
+                        elem.style.animation = 'none';
+                        elem.offsetHeight;
+                        elem.style.animation = null;
+                    }, 100);
+                });
+            </script>
+            <!-- End of row and animation -->
         </div>
     </div>
 </body>

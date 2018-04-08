@@ -49,8 +49,6 @@
             padding-right: 0px;
             padding-left: 0px;
         }
-
-
     </style>
 </head>
 
@@ -84,26 +82,31 @@
             </nav>
 
             <!-- End of nav bar-->
-            <div class="container-fluid title animated rotateIn">
+
+            <div class="container-fluid title animated rotateIn" id="top">
+
                 <video poster="brexitBG.jpg" autoplay="true" loop>
                     <source src="videos/londonstockvideo.mp4" type="video/mp4" />
                     <source src="videos/londonstockvideo.webm" type="video/webm" />
                 </video>
                 <div class="caption">
                     THE GENERAL OVERVIEW OF THE BREXIT MOVEMENT
-                    <div>
-                        <a href="#below" class="btn btn-xl btn-primary">Continue</a>
+                    <div class="btn-group" role="group" aria-label="navigation">
+                        <a href="#below" class="btn btn-xl btn-primary" id="button1">What is Brexit?</a>
+                        <a href="#now" class="btn btn-xl btn-primary" id="button2">Brexit Now</a>
                     </div>
                 </div>
 
             </div>
-            <div class="container-fluid section" id="below" style="background-color:lightsteelblue">
+            <div>
+                <a class="menu" href="#top">Top</a>
+            </div>
+            <div class="container-fluid section animated rotateInUpLeft" id="below" style="background-color:lightsteelblue">
                 <div>
                     <br />
                     <h1 class="header">What is Brexit?</h1>
-                    <p style="font-size: 1.5vw">
-                        <!-- New image to this please -->
-                        <img src="images/protestsforbrexit.jpg" alt="EU and British Flag" class="pull-left" style="padding-right: 10px; padding: 30px; height: 70vh; width: 50vw" />
+                    <p style="font-size: 1.4vw;">
+                        <img src="images/brexitgeneral.jpg" alt="EU and British Flag" class="pull-left" style="padding-right: 10px; padding: 30px; height: 60vh; width: 50vw" />
                         “Brexit” is a word that describes the United Kingdom’s exit from the European Union. June 2016, Britain voted in favor of exiting the European Union.
                         The official date for the exit of Britain is on March 29th 2019. However, it is argued that the United Kingdom can stop the exit through a unilateral decision from its government.
                         The legality of this procedure is disputed, but it allows for the UK a way out if they decide the exit is not the optimal decision. One of the main voting issues was on immigration.
@@ -114,19 +117,12 @@
                     </p>
                 </div>
             </div>
-            <div class="container-fluid section" style="background-color:mediumseagreen">
-                <div>
-                    <h1 class="header">The Euro Currency:</h1>
-                    <!-- To Do - Put in list-->
-                    <p>
-                        <img src="images/euro_symbol_gold.png" alt="EU and British Flag" class="pull-right" style="padding-right: 10px; height: 70vh; width: 45vw" />
-                        The Euro is the official currency of 19 EU countries: Austria, Belgium, Cyprus, Estonia, Finland, France, Germany, Greece,
-                        Ireland, Italy, Latvia, Lithuania, Luxembourg, Malta, the Netherlands, Portugal, Slovakia, Slovenia, and Spain.
-                        These countries are collected known as the euro area or eurozone, with currency regulation controlled by the Eurosystem,
-                        which consists of the European Central Bank in Frankfurt, Germany and the national banks of member nations. It was established
-                        as the official EU currency in 1992 through the Maastricht Treaty and remains as the official EU currency.
-                    </p>
-                </div>
+            <div class="container-fluid section animated zoomIn" id="now" style="background-color:mediumseagreen; padding-bottom: 50px">
+                <h1 class="header">The Current Situation Of Brexit</h1>
+                <p>
+                    <img src="images/stepsforbrexit.png" alt="map of EU" class="pull-right" style="padding-left: 30px; height: 100vh; width: 30vw" />
+
+                </p>
             </div>
             <!-- Footer -->
             <div class="container-fluid">
@@ -135,6 +131,24 @@
                     <a href="workscited.html">Works Cited</a>
                 </footer>
             </div>
+            <script>
+                $("#button1").click(function () {
+                    setTimeout(function () {
+                        var elem = document.getElementById("below");
+                        elem.style.animation = 'none';
+                        elem.offsetHeight;
+                        elem.style.animation = null;
+                    }, 200);
+                });
+                    $("#button2").click(function () {
+                        setTimeout(function () {
+                            var elem = document.getElementById("now");
+                            elem.style.animation = 'none';
+                            elem.offsetHeight;
+                            elem.style.animation = null;
+                        }, 200);
+                });
+            </script>
 
             <!-- End of file - closing the animations and those things -->
         </div>

@@ -79,17 +79,22 @@
             </nav>
 
             <!-- End of nav bar-->
-            <div class="container-fluid main animated rotateIn">
+
+            <div>
+                <a class="menu" href="#top">Top</a>
+            </div>
+
+            <div class="container-fluid main animated rotateIn" id="top">
                 <div class="caption">
                         CAUSES AND ORIGINS
                             <div class="btn-group" role="group" aria-label="navigation">
-                                <a href="#origins" class="btn btn-xl btn-primary">Origins</a>
-                                <a href="#causes" class="btn btn-xl btn-primary">Causes</a>
+                                <a href="#origins" class="btn btn-xl btn-primary" id="button1">Origins</a>
+                                <a href="#causes" class="btn btn-xl btn-primary" id="button2">Causes</a>
                             </div>
                 </div>
             </div>
-            <div class="container-fluid section" style="background-color:antiquewhite">
-                    <h1 class="header" id="origins">Origins</h1>
+            <div class="container-fluid section animated lightSpeedIn" id="origins" style="background-color:antiquewhite">
+                    <h1 class="header" >Origins</h1>
                     <img src="images/protestsforbrexit.jpg" width="50%" height="60%" alt="EuropeProtests" class="pull-right" />
                     <p>
                         Opposition to the membership in the EU has existed within the British people ever since the United Kingdom joined in the 1970s.
@@ -103,14 +108,14 @@
                         This made British citizens angry for having to carry the burden of supporting other countries because they were in the European Union.
                     </p>
             </div>
-            <div class="container-fluid section" style="background-color:Background; font-size:30px">
+            <div class="container-fluid section animated zoomInRight" id="causes" style="background-color:Background; font-size:30px">
                 <br />
 
-                    <h1 class="header" id="causes">Causes</h1>
+                    <h1 class="header" >Causes</h1>
                     <p>
                         <img src="images/figure1ukidentity.png" width="50%" height="100%" alt="Figure of Europe identity" class="pull-left" style="padding-right: 39px; padding-top: 30px" />
                         A very huge factor that plays in the constant support of a secession from the EU is the sense of European identification in the UK. The UK
-                        really stands out, as it is rankd 28 out of 28 for European identity - it is also rated first for the percentage of people that identify as "nation only."
+                        really stands out, as it is ranked 28 out of 28 for European identity - it is also rated first for the percentage of people that identify as "nation only."
                     </p>
                     <p>
                         Now, the UK Independence Party in light of mass immigration patterns to the UK grew in success in recent years.
@@ -134,6 +139,25 @@
                     <a href="workscited.html">Works Cited</a>
                 </footer>
             </div>
+
+            <script>
+                $("#button1").click(function () {
+                    setTimeout(function () {
+                        var elem = document.getElementById("origins");
+                        elem.style.animation = 'none';
+                        elem.offsetHeight;
+                        elem.style.animation = null;
+                    }, 50);
+                });
+                    $("#button2").click(function () {
+                        setTimeout(function () {
+                            var elem = document.getElementById("causes");
+                            elem.style.animation = 'none';
+                            elem.offsetHeight;
+                            elem.style.animation = null;
+                        }, 100);
+                });
+            </script>
 
             <!-- End of file - closing the animations and those things -->
         </div>
