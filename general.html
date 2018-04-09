@@ -100,7 +100,7 @@
             <div>
                 <a class="menu" href="#top">Top</a>
             </div>
-            <div class="container-fluid section animated rotateInUpLeft" id="below" style="background-color:lightsteelblue">
+            <div class="container-fluid section animation animated rotateInUpLeft" id="below" style="background-color:lightsteelblue">
                 <div>
                     <br />
 
@@ -120,7 +120,7 @@
                     </p>
                 </div>
             </div>
-            <div class="container-fluid section animated zoomIn" id="now" style="background-color:mediumseagreen; padding-bottom: 50px">
+            <div class="container-fluid section animation2 animated zoomIn" id="now" style="background-color:mediumseagreen; padding-bottom: 50px">
 
                 <h1 class="header" style="font-size: 4vw">The Current Situation Of Brexit</h1>
                 <img src="images/stepsforbrexit.png" alt="map of EU" class="pull-right" style="padding-left: 30px; height: 88vh; width: 30vw" />
@@ -158,6 +158,52 @@
                             elem.style.animation = null;
                         }, 100);
                 });
+                    // when scroll run animation
+                    ; (function ($, win) {
+                        $.fn.inViewport = function (cb) {
+                            return this.each(function (i, el) {
+                                function visPx() {
+                                    var H = $(this).height(),
+                                        r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+                                    return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+                                } visPx();
+                                $(win).on("resize scroll", visPx);
+                            });
+                        };
+                    }(jQuery, window));
+
+                    var done = false;
+
+                    $(".animation").inViewport(function (px) {
+                        if (px) {
+                            if (done == false) {
+                                setTimeout(function () {
+                                    var elem = document.getElementById("below");
+                                    elem.style.animation = 'none';
+                                    elem.offsetHeight;
+                                    elem.style.animation = null;
+                                }, 100);
+                                done = true;
+                            }
+                        }
+                    });
+
+                    var done2 = false;
+
+                    //for last section
+                    $(".animation2").inViewport(function (px) {
+                        if (px) {
+                            if (done2 == false) {
+                                setTimeout(function () {
+                                    var elem = document.getElementById("now");
+                                    elem.style.animation = 'none';
+                                    elem.offsetHeight;
+                                    elem.style.animation = null;
+                                }, 50);
+                                done2 = true;
+                            }
+                        }
+                    });
             </script>
 
             <!-- End of file - closing the animations and those things -->

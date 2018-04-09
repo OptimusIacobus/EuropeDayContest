@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <title>Europe Day Contest Website</title>
@@ -88,7 +88,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid section animated fadeInLeft" style="padding-top:70px; background-color: lightgreen" id="general">
+            <div class="container-fluid section animation animated fadeInLeft" style="padding-top:70px; background-color: lightgreen" id="general">
                 <img src="images/againstbrexit3.png" width="60%" height="70%" alt="Protests" class="pull-left" style="padding-right: 10px; padding-top: 80px"/>
                 <p style="padding-top:70px">
                     However, the decision to split from the European Union was not unanimous, there were many people unhappy with the outcome of the first referendum .
@@ -96,7 +96,7 @@
                     and some are protesting day round, trying to reverse the decision. These protesters are hoping for another general election about Brexit, and that Britain's majority will agree with them.
                 </p>
             </div>
-            <div class="container-fluid section" style="background-color: lightgoldenrodyellow">
+            <div class="container-fluid section animation2 animated rollIn" id="general2" style="background-color: lightgoldenrodyellow">
                 <img src="images/againstbrexit4.png" width="60%" height="70%" alt="Woman with EU paint" class="pull-right" style="padding-right: 10px; padding-left: 20px" />
                 <p>
                     Multiple protests have happened since the day Brexit was decided. One of the biggest protests was a protest in London during September 2017, in which 50,000 people are estimated
@@ -124,7 +124,53 @@
                                     elem.offsetHeight;
                                     elem.style.animation = null;
                                 }, 100);
-                            });
+                });
+                // when scroll run animation
+                ; (function ($, win) {
+                    $.fn.inViewport = function (cb) {
+                        return this.each(function (i, el) {
+                            function visPx() {
+                                var H = $(this).height(),
+                                    r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+                                return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+                            } visPx();
+                            $(win).on("resize scroll", visPx);
+                        });
+                    };
+                }(jQuery, window));
+
+                var done = false;
+
+                $(".animation").inViewport(function (px) {
+                    if (px) {
+                        if (done == false) {
+                            setTimeout(function () {
+                                var elem = document.getElementById("general");
+                                elem.style.animation = 'none';
+                                elem.offsetHeight;
+                                elem.style.animation = null;
+                            }, 100);
+                            done = true;
+                        }
+                    }
+                });
+
+                var done2 = false;
+
+                //for last section
+                $(".animation2").inViewport(function (px) {
+                    if (px) {
+                        if (done2 == false) {
+                            setTimeout(function () {
+                                var elem = document.getElementById("general2");
+                                elem.style.animation = 'none';
+                                elem.offsetHeight;
+                                elem.style.animation = null;
+                            }, 50);
+                            done2 = true;
+                        }
+                    }
+                });
             </script>
             <!-- End of file - closing the animations and those things -->
         </div>

@@ -120,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid animated slideInRight">
+            <div class="container-fluid animation animated slideInRight" id="sectiona">
                 <div class="section" style="background-color:dimgrey; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Open Sans', sans-serif">
                         <img src="images/protestsforbrexit.jpg" width="60%" height="80%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid animation animated zoomIn" id="section3">
+            <div class="container-fluid animation2 animated zoomIn" id="sectionb">
                 <div class="section" style="background-color:honeydew; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Open Sans', sans-serif; padding-left:30px">
                         <img src="images/againstbrexit1.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
@@ -161,6 +161,53 @@
                         elem.offsetHeight;
                         elem.style.animation = null;
                     }, 100);
+                });
+
+                // when scroll run animation
+                ; (function ($, win) {
+                    $.fn.inViewport = function (cb) {
+                        return this.each(function (i, el) {
+                            function visPx() {
+                                var H = $(this).height(),
+                                    r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+                                return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+                            } visPx();
+                            $(win).on("resize scroll", visPx);
+                        });
+                    };
+                }(jQuery, window));
+
+                var done = false;
+
+                $(".animation").inViewport(function (px) {
+                    if (px) {
+                        if (done == false) {
+                            setTimeout(function () {
+                                var elem = document.getElementById("sectiona");
+                                elem.style.animation = 'none';
+                                elem.offsetHeight;
+                                elem.style.animation = null;
+                            }, 100);
+                            done = true;
+                        }
+                    }
+                });
+
+                var done2 = false;
+
+                //for last section
+                $(".animation2").inViewport(function (px) {
+                    if (px) {
+                        if (done2 == false) {
+                            setTimeout(function () {
+                                var elem = document.getElementById("sectionb");
+                                elem.style.animation = 'none';
+                                elem.offsetHeight;
+                                elem.style.animation = null;
+                            }, 50);
+                            done2 = true;
+                        }
+                    }
                 });
             </script>
             <!-- End of row and animation -->
