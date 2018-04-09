@@ -107,6 +107,7 @@ video {
     color: floralwhite;
     background-color: transparent;
     border-bottom-color: orangered;
+    opacity: .7;
 }
 
 
@@ -122,7 +123,7 @@ li.nav-item {
     font-weight: bold;
     margin: 0;
     font-family: 'Ubuntu', sans-serif;
-    color: floralwhite;
+    color: lightgrey;
 }
 a:hover.navbar-brand{
     color: purple;
@@ -130,7 +131,7 @@ a:hover.navbar-brand{
 
 .nav > li > a {
     padding-bottom: 30px;
-    color: floralwhite;
+    color: lightgrey;
 }
 .nav > li > a:hover {
     background-color: transparent;
