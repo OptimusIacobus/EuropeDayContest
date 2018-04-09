@@ -28,7 +28,6 @@
     <!-- Attempt at adding smooth scrolling with Jquery -->
     <script src="smoothscroll.js"></script>
 
-    </script>
     <style>
         h2 {
             font-size: 5vh;
@@ -37,8 +36,36 @@
         .main {
             background-image: url("images/brexitBG.jpg");
         }
+
     </style>
 
+    <script>
+        ; (function ($, win) {
+            $.fn.inViewport = function (cb) {
+                return this.each(function (i, el) {
+                    function visPx() {
+                        var H = $(this).height(),
+                            r = el.getBoundingClientRect(), t = r.top, b = r.bottom;
+                        return cb.call(el, Math.max(0, t > 0 ? H - t : (b < H ? b : H)));
+                    } visPx();
+                    $(win).on("resize scroll", visPx);
+                });
+            };
+        }(jQuery, window));
+
+
+
+        $(".animation").inViewport(function (px) {
+            if (px) {
+                setTimeout(function () {
+                    var elem = document.getElementById("section3");
+                    elem.style.animation = 'none';
+                    elem.offsetHeight;
+                    elem.style.animation = null;
+                }, 100);
+            }
+        });
+    </script>
 
 </head>
 <body data-spy="scroll">
@@ -105,9 +132,9 @@
                 </div>
             </div>
 
-            <div class="container-fluid">
-                <div class="section animated zoomIn" style="background-color:honeydew; display: table-cell; vertical-align: middle;">
-                    <p style="font-family: 'Open Sans', sans-serif">
+            <div class="container-fluid animation animated zoomIn" id="section3">
+                <div class="section" style="background-color:honeydew; display: table-cell; vertical-align: middle;">
+                    <p style="font-family: 'Open Sans', sans-serif; padding-left:30px">
                         <img src="images/againstbrexit1.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
                         Even though a referendum has been passed on leaving the EU, there are many citizens of the UK that do not agree with the movement.
                         These protestors want another referendum to show that it was only so many people that wanted a secession, and that in reality
