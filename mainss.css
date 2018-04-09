@@ -105,9 +105,8 @@ video {
 /* Navbar adjustments */
 .navbar {
     color: floralwhite;
-    background-color: lightgrey;
+    background-color: #cfcfcf;
     border-bottom-color: orangered;
-    opacity: .7;
 }
 
 

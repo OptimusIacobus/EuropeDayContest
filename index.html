@@ -99,7 +99,7 @@
                 <a class="menu" href="#top">Top</a>
             </div>
             <!-- End of nav bar-->
-            <div class="container-fluid main animated slideInUp" id="top">
+            <div class="container-fluid main animated slideInDown" id="top">
                 <div class="caption">
                     <div style="font-family: Andalus; font-size: 8vw">THE BREXIT CRISIS</div>
                     <h2>Europe Day Contest Entry</h2><br />
@@ -120,7 +120,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid animation animated slideInRight" id="sectiona">
+            <div class="container-fluid animation animated slideInLeft" id="sectiona">
                 <div class="section" style="background-color:dimgrey; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Open Sans', sans-serif">
                         <img src="images/protestsforbrexit.jpg" width="60%" height="80%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
@@ -132,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="container-fluid animation2 animated zoomIn" id="sectionb">
+            <div class="container-fluid animation2 animated slideInUp" id="sectionb">
                 <div class="section" style="background-color:honeydew; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Open Sans', sans-serif; padding-left:30px">
                         <img src="images/againstbrexit1.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-right" style="padding-right: 10px" />
@@ -193,19 +193,19 @@
                     }
                 });
 
-                var done2 = false;
+                var done3 = false;
 
                 //for last section
                 $(".animation2").inViewport(function (px) {
                     if (px) {
-                        if (done2 == false) {
+                        if (done3 == false) {
                             setTimeout(function () {
                                 var elem = document.getElementById("sectionb");
                                 elem.style.animation = 'none';
                                 elem.offsetHeight;
                                 elem.style.animation = null;
                             }, 50);
-                            done2 = true;
+                            done3 = true;
                         }
                     }
                 });
