@@ -107,7 +107,7 @@
                     <a href="#below" class="btn btn-xl btn-primary" id="buttons">Explore Below</a>
                 </div>
             </div>
-            <div class="container-fluid animated slideInRight" id="below">
+            <div class="container-fluid animation3 animated slideInRight" id="below">
                 <div class="section" style="background-color:darkred; display: table-cell; vertical-align: middle;">
                     <p style="font-family: 'Microsoft Yi Baiti', sans-serif; color: dodgerblue; font-weight: bolder">
                         <img src="images/ukeu.jpg" width="45%" height="70%" alt="EU and British Flag" class="pull-left" style="padding-right: 10px" />
@@ -201,6 +201,19 @@
                         if (done2 == false) {
                             setTimeout(function () {
                                 var elem = document.getElementById("sectionb");
+                                elem.style.animation = 'none';
+                                elem.offsetHeight;
+                                elem.style.animation = null;
+                            }, 50);
+                            done2 = true;
+                        }
+                    }
+                });
+                $(".animation3").inViewport(function (px) {
+                    if (px) {
+                        if (done2 == false) {
+                            setTimeout(function () {
+                                var elem = document.getElementById("below");
                                 elem.style.animation = 'none';
                                 elem.offsetHeight;
                                 elem.style.animation = null;
