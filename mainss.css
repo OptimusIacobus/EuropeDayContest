@@ -112,13 +112,13 @@ video {
 
 
 li.nav-item {
-    height: 20px;
+    height: 2vh;
     font-size: 1vw;
     font-weight: bold;
 }
 
 .navbar-brand {
-    height: 20px;
+    height: 2vh;
     font-size: 1.8vw;
     font-weight: bold;
     margin: 0;
@@ -130,7 +130,7 @@ a:hover.navbar-brand{
 }
 
 .nav > li > a {
-    padding-bottom: 30px;
+    padding-bottom: 3vh;
     color: floralwhite;
 }
 .nav > li > a:hover {
